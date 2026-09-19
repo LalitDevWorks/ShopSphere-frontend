@@ -18,7 +18,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
                         }
                     })
                 const data = await response.json()
-                if (!data) {
+                if (!response.ok) {
                     console.log(data.message);
                 }
                 console.log(data)
